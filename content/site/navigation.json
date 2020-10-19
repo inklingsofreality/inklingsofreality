@@ -1,0 +1,40 @@
+{
+  "headerNavigation": [
+    {
+      "name": "Home",
+      "link": "/",
+      "external": false
+    },
+    {
+      "name": "Monday Musings",
+      "link": "/category/monday-musings",
+      "external": false
+    }
+  ],
+  "footerNavigation": [{
+      "name": "Latest Posts",
+      "link": "/",
+      "external" : false
+    },
+    {
+      "name": "Facebook",
+      "link": "https://www.facebook.com/ccoppenbarger",
+      "external" : true
+    },
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/inkofreality",
+      "external" : true
+    },
+    {
+      "name": "Linkedin",
+      "link": "https://www.linkedin.com/in/ccoppenbarger",
+      "external" : true
+    },
+    {
+      "name": "RSS",
+      "link": "/rss.xml",
+      "external": false
+    }
+  ]
+}

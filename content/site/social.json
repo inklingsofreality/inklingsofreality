@@ -1,0 +1,19 @@
+{
+  "social": [
+    {
+      "icon": "facebook",
+      "link": "https://www.facebook.com/ccoppenbarger",
+      "external" : true
+    },
+    {
+      "icon": "twitter",
+      "link": "https://twitter.com/inkofreality",
+      "external" : true
+    },
+    {
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/in/ccoppenbarger",
+      "external" : true
+    }
+  ]
+}
