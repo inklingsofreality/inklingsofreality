@@ -85,4 +85,4 @@ module.exports = {
       component: '~/templates/Tag.vue'
     }],
   }
-}
+};

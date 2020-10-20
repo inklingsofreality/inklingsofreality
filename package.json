@@ -23,7 +23,8 @@
     "tailwindcss-gradients": "^3.0.0",
     "tailwindcss-tables": "^0.4.0",
     "v-tooltip": "^2.0.3",
-    "vue-disqus": "^4.0.1"
+    "vue-disqus": "^4.0.1",
+    "vue-social-sharing": "^3.0.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",

@@ -54,7 +54,30 @@
         <section class="post-content container mx-auto relative font-serif text-gray-700">
           <div class="post-content-text text-xl" v-html="$page.blog.content"></div>
         </section>
-
+        <section class="post-tags container mx-auto relative py-10">
+          <h3>Please Share</h3>
+          <ShareNetwork
+          network="facebook"
+          :url="'https://inklingsofreality.netlify.app'+$page.blog.path"
+          :title="$page.blog.title"
+          :description="$page.blog.excerpt"
+          :hashtags="hashtags"
+          class="cursor-pointer">
+            <font-awesome :icon="['fab', 'facebook']" class="fa-2x hover:text-orange-700"/>
+          </ShareNetwork>
+          &nbsp;&nbsp;
+           <ShareNetwork
+           network="twitter"
+          :url="'https://inklingsofreality.netlify.app'+$page.blog.path"
+          :title="$page.blog.title"
+          :description="$page.blog.excerpt"
+          twitter-user="inkofreality"          
+          :hashtags="hashtags"
+          class="cursor-pointer">
+            <font-awesome :icon="['fab', 'twitter']" class="fa-2x hover:text-orange-700"/>
+          </ShareNetwork>
+          
+        </section>
         <section class="post-tags container mx-auto relative py-10">
           <g-link
             v-for="tag in $page.blog.tags"
@@ -178,10 +201,74 @@ import PostListItem from "~/components/PostListItem.vue";
 export default {
   components: {
     PostListItem
+  },    
+  data () {
+    return {
+      hashtags: ""
+    }
+  },
+  mounted () {
+    const hashes = [];
+    this.$page.blog.tags.forEach(element => {
+      hashes.push(element.title);      
+    });
+    this.hashtags = hashes.join(',');
   },
   metaInfo() {
     return {
-      title: this.$page.blog.title
+      title: this.$page.blog.title,
+      meta: [
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: this.$page.blog.title,
+        },
+        {
+          key: 'og:url',
+          name: 'og:url',
+          content: 'https://inklingsofreality.netlify.app'+this.$page.blog.path,
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: this.$page.blog.excerpt,
+        },
+        {
+          key: 'og:image',
+          name: 'og:image',
+          content: 'https://inklingsofreality.netlify.app'+this.$page.blog.image.src,
+        },
+{
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: this.$page.blog.title,
+        },
+        {
+          key: 'twitter:description',
+          name: 'twitter:description',
+          content: this.$page.blog.excerpt,
+        },
+        {
+          key: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://inklingsofreality.netlify.app'+this.$page.blog.image.src,
+        },
+        {
+          key: 'twitter:site',
+          name: 'twitter:site',
+          content: '@inkofreality',
+        },
+        {
+          key: 'twitter:creator',
+          name: 'twitter:creator',
+          content: '@inkofreality',
+        },
+        {
+          key: 'twitter:card',
+          name: 'twitter:card',
+          content: "summary_large_image",
+        },
+      ],
     };
   }
   
