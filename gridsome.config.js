@@ -9,7 +9,7 @@ module.exports = {
   siteDescription: 'Conversations about the true reality',
   siteUrl: 'http://localhost:8080',
   plugins: [
-    {
+        {
       use: 'gridsome-plugin-tailwindcss',
       options: {
         tailwindConfig: './tailwind.config.js',
