@@ -14,6 +14,11 @@
       "name": "Wednesday Word",
       "link": "/category/wednesday-word",
       "external": false
+    },
+    {
+      "name": "Thursday Tracks",
+      "link": "/category/thursday-tracks",
+      "external": false
     }
   ],
   "footerNavigation": [{
