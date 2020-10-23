@@ -19,6 +19,11 @@
       "name": "Thursday Tracks",
       "link": "/category/thursday-tracks",
       "external": false
+    },
+    {
+      "name": "Friday Follies",
+      "link": "/category/friday-follies",
+      "external": false
     }
   ],
   "footerNavigation": [{
