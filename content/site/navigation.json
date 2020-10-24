@@ -24,6 +24,11 @@
       "name": "Friday Follies",
       "link": "/category/friday-follies",
       "external": false
+    },
+    {
+      "name": "Saturday Serial",
+      "link": "/category/saturday-serial",
+      "external": false
     }
   ],
   "footerNavigation": [{
